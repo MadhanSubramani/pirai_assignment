@@ -37,6 +37,8 @@ try{
     const checkPassword = await bcrypt.compare(reqBody.password,userDetails.password);
     if(!checkPassword) return res.status(400).send({message: 'Invalid password'});
 
+    delete userDetails.password;
+    
     const accessToken = jwt.sign(userDetails,process.env.TOKEN,{ algorithm: process.env.ALGORITHM, expiresIn: process.env.TOKEN_EXPIRE_TIME });
     return res.status(200).send({message: 'Successfully logged-in', token: accessToken});
 }

@@ -61,6 +61,7 @@ async function updateTodo(req,res){
     try{
         let {id} = req.params;
         let payload = req.body;
+        payload['updatedAt'] = new Date();
         let result = await todoRepo.findTodoAndUpdate({_id: new mongoose.Types.ObjectId(id), isActive: true},payload); 
         if(!result) return res.status(400).send({message: 'Todo not found'});
         return res.status(200).send({message: 'Todo successfully updated'});
