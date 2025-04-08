@@ -7,4 +7,4 @@ const universalFunc = require('../utils/universalFunc');
 router.post('/signup', universalFunc.checkSignUpPayload ,authController.signup);
 router.post('/login', authController.login);
 
-module.exports = router;
+module.exports = router

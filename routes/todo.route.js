@@ -10,4 +10,4 @@ router.post('/todo',universalFunc.checkAccessTokenExpires, universalFunc.checkTo
 router.delete('/todo/:id',universalFunc.checkAccessTokenExpires, todoController.deleteTodo);
 router.put('/todo/:id',universalFunc.checkAccessTokenExpires, todoController.updateTodo);
 
-module.exports = router;
+module.exports = router

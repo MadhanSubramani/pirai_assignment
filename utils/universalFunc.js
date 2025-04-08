@@ -27,4 +27,4 @@ exports.checkTodoPayload = (req,res,next) => {
     if(todoName.trim().length < 3 || status.trim().length < 3 )
         return res.status(400).send({message: 'Enter valid input'});
     next();
-}
+};

@@ -48,4 +48,4 @@ catch(err){
 module.exports = {
     signup,
     login
-}
+};

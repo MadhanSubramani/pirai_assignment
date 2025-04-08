@@ -45,4 +45,4 @@ module.exports = {
     checkUsernameExists,
     saveNewUser,
     getUser
-}
+};

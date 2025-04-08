@@ -12,6 +12,7 @@ server.use('/api',authRoutes);
 server.use('/api',todoRoutes);
 
 const port = process.env.PORT;
+
 server.listen(port, () => {
     console.info('Server is listening on ', port);
 })
