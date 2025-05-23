@@ -10,7 +10,7 @@ server.use(bodyParser.json({limit: '5mb'}))
 
 server.use('/api',authRoutes);
 server.use('/api',todoRoutes);
-server.use('/test',(req,res) => res.status(200).send('Hello World'));
+server.use('/',(req,res) => res.status(200).send('Hello World'));
 
 const port = process.env.PORT || 3000;
 
